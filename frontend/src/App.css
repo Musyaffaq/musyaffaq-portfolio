@@ -1,0 +1,18 @@
+.page-title{
+  text-align: center; 
+}
+
+.nav-links{
+  position: relative;
+  float: right;
+}
+
+* {
+  font-family: monospace;
+  font-size: large;
+}
+
+.homepage {
+  text-align: justify;
+}
+
