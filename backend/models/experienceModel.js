@@ -6,7 +6,7 @@ const experienceSchema = new mongoose.Schema({
     auto: true,
   },
   company: {
-    // required: false,
+    required: false,
     type: String,
   },
   role: {
