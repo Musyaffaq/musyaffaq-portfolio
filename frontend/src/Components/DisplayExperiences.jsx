@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import Cards from "./Cards";
 import { Grid } from "@mui/material";
 import API_LINK from "../Api";
+import { Skeleton, Typography } from "@mui/material";
 
 function DisplayExperiences() {
   const [data, setData] = useState([]);
@@ -14,9 +15,38 @@ function DisplayExperiences() {
 
   return (
     <Grid container style={{ justifyContent: "center" }}>
-      {data.map((item, id) => {
-        return <Cards key={id} item={item} type="work" />;
-      })}
+      {data[0] === undefined ? (
+        <>
+          <Skeleton width="30em">
+            <Typography>.</Typography>
+          </Skeleton>
+          <Skeleton width="30em">
+            <Typography>.</Typography>
+          </Skeleton>
+          <Skeleton width="30em">
+            <Typography>.</Typography>
+          </Skeleton>
+          <Skeleton width="30em">
+            <Typography>.</Typography>
+          </Skeleton>
+          <Skeleton width="30em">
+            <Typography>.</Typography>
+          </Skeleton>
+          <Skeleton width="30em">
+            <Typography>.</Typography>
+          </Skeleton>
+          <Skeleton width="30em">
+            <Typography>.</Typography>
+          </Skeleton>
+          <Skeleton width="30em">
+            <Typography>.</Typography>
+          </Skeleton>
+        </>
+      ) : (
+        data.map((item, id) => {
+          return <Cards key={id} item={item} type="work" />;
+        })
+      )}
     </Grid>
   );
 }
