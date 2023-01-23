@@ -1,12 +1,13 @@
 import { useState, useEffect } from "react";
 import Cards from "./Cards";
 import { Grid } from "@mui/material";
+import API_LINK from "../Api";
 
 function DisplayProjects() {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/projects")
+    fetch(`${API_LINK}/projects`)
       .then((res) => res.json())
       .then((data) => setData(data));
   }, []);
