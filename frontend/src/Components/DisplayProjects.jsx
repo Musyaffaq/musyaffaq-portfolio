@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import Cards from "./Cards";
 import { Grid } from "@mui/material";
 import API_LINK from "../Api";
-import { Skeleton, Typography } from "@mui/material";
+import SkeletonLoading from "./SkeletonLoading";
 
 function DisplayProjects() {
   const [data, setData] = useState([]);
@@ -17,30 +17,7 @@ function DisplayProjects() {
     <Grid container style={{ justifyContent: "center" }}>
       {data[0] === undefined ? (
         <>
-          <Skeleton width="30em">
-            <Typography>.</Typography>
-          </Skeleton>
-          <Skeleton width="30em">
-            <Typography>.</Typography>
-          </Skeleton>
-          <Skeleton width="30em">
-            <Typography>.</Typography>
-          </Skeleton>
-          <Skeleton width="30em">
-            <Typography>.</Typography>
-          </Skeleton>
-          <Skeleton width="30em">
-            <Typography>.</Typography>
-          </Skeleton>
-          <Skeleton width="30em">
-            <Typography>.</Typography>
-          </Skeleton>
-          <Skeleton width="30em">
-            <Typography>.</Typography>
-          </Skeleton>
-          <Skeleton width="30em">
-            <Typography>.</Typography>
-          </Skeleton>
+          <SkeletonLoading />
         </>
       ) : (
         data.map((item, id) => {
