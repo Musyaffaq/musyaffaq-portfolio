@@ -1,7 +1,11 @@
 import * as React from "react";
-import Card from "@mui/material/Card";
-import CardContent from "@mui/material/CardContent";
-import Typography from "@mui/material/Typography";
+import {
+  Chip,
+  Typography,
+  CardContent,
+  Card,
+  CardActionArea,
+} from "@mui/material";
 
 function BasicCard({ item, type }) {
   return (
@@ -14,27 +18,45 @@ function BasicCard({ item, type }) {
         display: "inline-block",
       }}
     >
-      <CardContent>
-        <Typography
-          style={{ fontWeight: "bold" }}
-          gutterBottom
-          fontFamily={"inherit"}
-        >
-          {type === "work" ? item.company : item.projectName}
-        </Typography>
-        <Typography color="text.secondary" fontFamily={"inherit"}>
-          {item.startDate.slice(0, 7)} to {item.endDate.slice(0, 7)}
-        </Typography>
-        <Typography variant="body1" fontFamily={"inherit"}>
-          {item.role}
-        </Typography>
-        <Typography variant="body1" fontFamily={"inherit"}>
-          {item.description}
-        </Typography>
-        <Typography variant="body2" fontFamily={"inherit"}>
-          {item.skills}
-        </Typography>
-      </CardContent>
+      <CardActionArea>
+        <CardContent>
+          <Typography
+            style={{ fontWeight: "bold" }}
+            gutterBottom
+            fontFamily={"inherit"}
+          >
+            {type === "work" ? item.company : item.projectName}
+          </Typography>
+          <Typography
+            color="text.secondary"
+            variant="body2"
+            fontFamily={"inherit"}
+          >
+            {item.startDate.slice(0, 7)} to
+            {item.present ? "Present" : item.endDate.slice(0, 7)}
+          </Typography>
+          <Typography
+            color="text.secondary"
+            variant="body1"
+            fontFamily={"inherit"}
+          >
+            {item.role}
+          </Typography>
+          <Typography variant="body1" fontFamily={"inherit"}>
+            {item.description}
+          </Typography>
+          {item.skills.map((skill, id) => {
+            return (
+              <Chip
+                key={id}
+                label={skill}
+                size="small"
+                sx={{ marginRight: 0.5, marginTop: 0.5 }}
+              />
+            );
+          })}
+        </CardContent>
+      </CardActionArea>
     </Card>
   );
 }

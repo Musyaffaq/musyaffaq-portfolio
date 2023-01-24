@@ -21,13 +21,18 @@ const projectSchema = new mongoose.Schema({
     required: false,
     type: Date,
   },
+  present: {
+    required: true,
+    type: Boolean,
+    default: false,
+  },
   description: {
     required: true,
     type: String,
   },
   skills: {
     required: false,
-    type: String,
+    type: [String],
   },
 });
 
