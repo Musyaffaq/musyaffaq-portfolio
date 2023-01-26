@@ -84,8 +84,8 @@ function Header() {
               }}
             >
               {pages.map(([text, path], id) => (
-                <MenuItem key={id} onClick={handleCloseNavMenu}>
-                  <Link to={path} style={{ textDecoration: "none" }}>
+                <Link to={path} style={{ textDecoration: "none" }}>
+                  <MenuItem key={id} onClick={handleCloseNavMenu}>
                     <Typography
                       textAlign="center"
                       color="text.secondary"
@@ -93,8 +93,8 @@ function Header() {
                     >
                       {text}
                     </Typography>
-                  </Link>
-                </MenuItem>
+                  </MenuItem>
+                </Link>
               ))}
             </Menu>
           </Box>

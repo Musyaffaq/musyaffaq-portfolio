@@ -32,7 +32,7 @@ function BasicCard({ item, type }) {
             variant="body2"
             fontFamily={"inherit"}
           >
-            {item.startDate.slice(0, 7)} to
+            {item.startDate.slice(0, 7)} to{" "}
             {item.present ? "Present" : item.endDate.slice(0, 7)}
           </Typography>
           <Typography
