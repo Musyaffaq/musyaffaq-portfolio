@@ -1,15 +1,15 @@
+import { useState } from "react";
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { ThemeProvider, createTheme } from "@mui/material/styles";
+import CssBaseline from "@mui/material/CssBaseline";
+import Container from "react-bootstrap/esm/Container";
+
 import Homepage from "./Pages/Homepage";
 import ProjectPage from "./Pages/ProjectPage";
 import WorkExperiencePage from "./Pages/WorkExperiencePage";
 import ContactMePage from "./Pages/ContactMePage";
 import Header from "./Components/Header";
-import Footer from "./Components/Footer";
-import Container from "react-bootstrap/esm/Container";
-import { ThemeProvider, createTheme } from "@mui/material/styles";
-import CssBaseline from "@mui/material/CssBaseline";
-import { useState } from "react";
 
 // theme created using https://bareynol.github.io/mui-theme-creator/
 const lightTheme = createTheme({
@@ -62,7 +62,6 @@ function App() {
           </Routes>
         </Container>
       </BrowserRouter>
-      {/* <Footer /> */}
     </ThemeProvider>
   );
 }

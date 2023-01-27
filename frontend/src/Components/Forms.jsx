@@ -1,5 +1,6 @@
-import Form from "react-bootstrap/Form";
+// Not in use for now, to allow creating new records in MongoDB
 import { useState } from "react";
+import Form from "react-bootstrap/Form";
 import DatePicker from "react-datepicker";
 
 import "react-datepicker/dist/react-datepicker.css";

@@ -31,7 +31,7 @@ const projectSchema = new mongoose.Schema({
     type: String,
   },
   skills: {
-    required: false,
+    required: true,
     type: [String],
   },
 });

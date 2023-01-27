@@ -1,4 +1,3 @@
-import PageTitle from "../Components/PageTitle";
 import { LinkedIn, Email, Language, GitHub } from "@mui/icons-material";
 import {
   Card,
@@ -8,6 +7,8 @@ import {
   Typography,
   CardActionArea,
 } from "@mui/material";
+
+import PageTitle from "../Components/PageTitle";
 
 function ContactMePage() {
   const socials = [

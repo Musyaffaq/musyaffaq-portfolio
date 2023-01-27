@@ -1,6 +1,6 @@
 import { Container, Row, Col, Image } from "react-bootstrap";
-import ProfilePic from "../Images/profile-pic.jpg";
 import { TypeAnimation } from "react-type-animation";
+import ProfilePic from "../Images/profile-pic.jpg";
 
 function Homepage() {
   return (

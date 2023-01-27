@@ -1,8 +1,10 @@
 import { useState, useEffect } from "react";
-import Cards from "./Cards";
 import { Grid } from "@mui/material";
-import API_LINK from "../Api";
+
+import Cards from "./Cards";
 import SkeletonLoading from "./SkeletonLoading";
+
+import API_LINK from "../Api";
 
 function DisplayProjects() {
   const [data, setData] = useState([]);

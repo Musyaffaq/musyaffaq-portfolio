@@ -6,7 +6,7 @@ const experienceSchema = new mongoose.Schema({
     auto: true,
   },
   company: {
-    required: false,
+    required: true,
     type: String,
   },
   role: {
@@ -31,7 +31,7 @@ const experienceSchema = new mongoose.Schema({
     type: String,
   },
   skills: {
-    required: false,
+    required: true,
     type: [String],
   },
 });

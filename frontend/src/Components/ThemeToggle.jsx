@@ -1,7 +1,7 @@
 // from https://mui.com/material-ui/react-switch/#CustomizedSwitches.js
 
-import { FormGroup, styled, Switch, FormControlLabel } from "@mui/material";
 import { useState } from "react";
+import { FormGroup, styled, Switch, FormControlLabel } from "@mui/material";
 
 const MaterialUISwitch = styled(Switch)(({ theme }) => ({
   width: 62,

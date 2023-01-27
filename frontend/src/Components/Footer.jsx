@@ -1,3 +1,4 @@
+// Not in use, suppose to put something in the footer
 import { Typography } from "@mui/material";
 
 function Footer() {

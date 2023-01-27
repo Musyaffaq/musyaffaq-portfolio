@@ -1,6 +1,6 @@
 // adapted from https://www.freecodecamp.org/news/build-a-restful-api-using-node-express-and-mongodb/
 
-const express = require("express"); // this is like import, but a different way
+const express = require("express");
 const colors = require("colors");
 const connectDB = require("./config/db");
 const dotenv = require("dotenv").config();
@@ -12,7 +12,7 @@ connectDB();
 
 const app = express();
 
-app.use(express.json()); // allow us to send raw json if not we get undefined
+app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
 app.get("/", (req, res) => {
