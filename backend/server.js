@@ -16,7 +16,13 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
 app.get("/", (req, res) => {
-  res.status(200).json({ message: "Welcome to Musyaffaq's Portfolio API" });
+  res.status(200).json({
+    message: "Welcome to Musyaffaq's Portfolio API",
+    usage: [
+      "GET /api/projects to look at my past projects",
+      "GET /api/experiences to look at my work experiences",
+    ],
+  });
 });
 
 app.use(cors());

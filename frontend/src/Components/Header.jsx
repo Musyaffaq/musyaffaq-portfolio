@@ -18,6 +18,7 @@ const pages = [
   ["Home", "/"],
   ["Projects", "/projects"],
   ["Experience", "/experiences"],
+  ["About This Site", "/about"],
   ["Contact Me", "/contact"],
 ];
 
@@ -85,8 +86,8 @@ function Header() {
               }}
             >
               {pages.map(([text, path], id) => (
-                <Link to={path} style={{ textDecoration: "none" }}>
-                  <MenuItem key={id} onClick={handleCloseNavMenu}>
+                <Link key={id} to={path} style={{ textDecoration: "none" }}>
+                  <MenuItem onClick={handleCloseNavMenu}>
                     <Typography
                       textAlign="center"
                       color="text.secondary"

@@ -10,6 +10,7 @@ import ProjectPage from "./Pages/ProjectPage";
 import WorkExperiencePage from "./Pages/WorkExperiencePage";
 import ContactMePage from "./Pages/ContactMePage";
 import Header from "./Components/Header";
+import AboutPage from "./Pages/AboutPage";
 
 // theme created using https://bareynol.github.io/mui-theme-creator/
 const lightTheme = createTheme({
@@ -58,6 +59,7 @@ function App() {
             <Route path="/" element={<Homepage />} />
             <Route path="/projects" element={<ProjectPage />} />
             <Route path="/experiences" element={<WorkExperiencePage />} />
+            <Route path="/about" element={<AboutPage />} />
             <Route path="/contact" element={<ContactMePage />} />
           </Routes>
         </Container>

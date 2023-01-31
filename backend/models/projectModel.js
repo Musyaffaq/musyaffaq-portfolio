@@ -34,6 +34,14 @@ const projectSchema = new mongoose.Schema({
     required: true,
     type: [String],
   },
+  github: {
+    required: false,
+    type: String,
+  },
+  demo: {
+    required: false,
+    type: String,
+  },
 });
 
 module.exports = mongoose.model("projectcollection", projectSchema);

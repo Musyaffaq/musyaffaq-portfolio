@@ -15,6 +15,8 @@ router.post("/projects/new", async (req, res) => {
     endDate: req.body.endDate,
     description: req.body.description,
     skills: req.body.skills,
+    github: req.body.github,
+    demo: req.body.demo,
   });
 
   try {
@@ -35,6 +37,8 @@ router.post("/experiences/new", async (req, res) => {
     endDate: req.body.endDate,
     description: req.body.description,
     skills: req.body.skills,
+    github: req.body.github,
+    demo: req.body.demo,
   });
 
   try {
