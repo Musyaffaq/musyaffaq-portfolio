@@ -7,4 +7,4 @@ Although it may look like a static website, the information on the projects and 
 One feature I would like to work on next is to add authentication (i.e. log in and log out) so that I would be able to edit the projects and work experiences pages through the frontend.
 
 Here is a diagram to help visualise how the web app works: 
-![image](https://user-images.githubusercontent.com/18120258/215776988-8f001640-81b3-498e-8871-f22813607632.png)
+![image](https://user-images.githubusercontent.com/18120258/215794889-33b7ca53-ec7d-4aa1-91e1-f34dff529f21.png)
