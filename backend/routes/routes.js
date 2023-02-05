@@ -5,14 +5,17 @@ const router = express.Router();
 const projectModel = require("../models/projectModel");
 const experienceModel = require("../models/experienceModel");
 
+const { protect } = require("../middleware/authMiddleware");
+
 // Add new projects
-router.post("/projects/new", async (req, res) => {
+router.post("/projects/new", protect, async (req, res) => {
   const data = new projectModel({
     _id: req.body._id,
     projectName: req.body.projectName,
     role: req.body.role,
     startDate: req.body.startDate,
     endDate: req.body.endDate,
+    present: req.body.present,
     description: req.body.description,
     skills: req.body.skills,
     github: req.body.github,
@@ -28,13 +31,14 @@ router.post("/projects/new", async (req, res) => {
 });
 
 // Add new experiences
-router.post("/experiences/new", async (req, res) => {
+router.post("/experiences/new", protect, async (req, res) => {
   const data = new experienceModel({
     _id: req.body._id,
     company: req.body.company,
     role: req.body.role,
     startDate: req.body.startDate,
     endDate: req.body.endDate,
+    present: req.body.present,
     description: req.body.description,
     skills: req.body.skills,
     github: req.body.github,

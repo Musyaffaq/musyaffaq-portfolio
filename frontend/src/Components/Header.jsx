@@ -11,8 +11,8 @@ import MenuIcon from "@mui/icons-material/Menu";
 import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
-
 import ThemeToggle from "./ThemeToggle";
+import LogoutButton from "./LogoutButton";
 
 const pages = [
   ["Home", "/"],
@@ -90,7 +90,7 @@ function Header() {
                   <MenuItem onClick={handleCloseNavMenu}>
                     <Typography
                       textAlign="center"
-                      color="text.secondary"
+                      color="text.primary"
                       variant="button"
                     >
                       {text}
@@ -128,15 +128,18 @@ function Header() {
             {pages.map(([text, path], id) => (
               <Link key={id} to={path} style={{ textDecoration: "none" }}>
                 <Button
+                  variant="text"
                   key={id}
                   onClick={handleCloseNavMenu}
-                  sx={{ my: 2, color: "white", display: "block" }}
+                  sx={{ my: 2, display: "block" }}
+                  style={{ color: "white" }}
                 >
                   {text}
                 </Button>
               </Link>
             ))}
           </Box>
+          <LogoutButton />
           <ThemeToggle />
         </Toolbar>
       </Container>

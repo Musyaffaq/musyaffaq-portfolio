@@ -29,9 +29,16 @@ function AboutPage() {
         .
       </p>
       <p>
-        One feature I would like to work on next is to add authentication (i.e.
-        log in and log out) so that I would be able to edit the projects and
-        work experiences pages through the frontend.{" "}
+        Additionally, I have made it so that I can edit those data through the
+        frontend. In order to do so, I have made it so that I can be
+        authenticated (i.e. log in) and then add new projects or experiences
+        through a form. That API endpoint is also protected through that
+        authentication.
+      </p>
+      <p>
+        For sure there are more things that can be done to make this website
+        better, but this is good enough for now! Feel free to contact me if you
+        see anything wrong with it.
       </p>
       <p>Here is a diagram to help visualise how the web app works:</p>
       <Image

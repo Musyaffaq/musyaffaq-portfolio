@@ -11,6 +11,8 @@ import WorkExperiencePage from "./Pages/WorkExperiencePage";
 import ContactMePage from "./Pages/ContactMePage";
 import Header from "./Components/Header";
 import AboutPage from "./Pages/AboutPage";
+import Login from "./Pages/Login";
+import LoggedOut from "./Pages/LoggedOut";
 
 // theme created using https://bareynol.github.io/mui-theme-creator/
 const lightTheme = createTheme({
@@ -61,6 +63,8 @@ function App() {
             <Route path="/experiences" element={<WorkExperiencePage />} />
             <Route path="/about" element={<AboutPage />} />
             <Route path="/contact" element={<ContactMePage />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/loggedout" element={<LoggedOut />} />
           </Routes>
         </Container>
       </BrowserRouter>
